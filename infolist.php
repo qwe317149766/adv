@@ -1,7 +1,7 @@
 <script>
  $(document).ready(function() {  
      $(".copyurl").click(function() {
-		 var fburl=$(this).attr("id"); 
+		 var fburl=$(this).attr("id");
 		 //alert(fburl);
 		 //$("#wxlink").html(fburl);
 		 $("#wxlink").val(fburl);
@@ -39,10 +39,10 @@ foreach(pq("li") as $key=> $company){
 	preg_match_all($ydpreg,$ydcont,$ydmatch);//阅读量
 	$tHref=$match[1][0];
 	//$gtHref = str_replace('&amp;',"|",$tHref);
-	$gtHref=str_replace(array("&amp;","#"),array("|",".."),$tHref);
+	$gtHref=pq("a")->attr('href');
  // $cjtitle=$cjtitle."<li>".$cont.$tHref."</li>";
     $cjtitle=$cjtitle."<li><ul><li class='tit'>".$ydcont."</li>";
-    $cjtitle=$cjtitle."<li class='cont'><span class='ydl'>阅读".$ydmatch[1][0]."</span><span><a href='javascript:void(0);' class='copyurl' id=".$tHref.">复制地址</a><a href='cjsave.php?xz=1&ad=".time().rand(10,100)."22&ur=".$gtHref."'>立即分享</a></span></li></ul></li>";
+    $cjtitle=$cjtitle."<li class='cont'><span class='ydl'>阅读".$ydmatch[1][0]."</span><span><a href='javascript:void(0);' class='copyurl' id=".$gtHref.">复制地址</a><a href='cjsave.php?xz=1&ad=".time().rand(10,100)."22&ur=".$gtHref."'>立即分享</a></span></li></ul></li>";
 
 }
 echo $cjtitle;
