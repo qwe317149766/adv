@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `tbl_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL COMMENT 'è??é??é?1?????–??·',
+  `content` text COMMENT 'é??è???????°',
+  `adpic` varchar(255) DEFAULT NULL COMMENT '?o¤???IP',
+  `adlink` varchar(255) DEFAULT NULL COMMENT '????o¤?—?é—′',
+  `userid` varchar(255) DEFAULT NULL COMMENT 'é??è???—?é—′',
+  `wcount` int(11) DEFAULT NULL COMMENT 'é??è???—?é—′??????/??????',
+  `acount` int(11) DEFAULT NULL,
+  `addtime` varchar(100) DEFAULT NULL,
+  `telnum` varchar(100) DEFAULT NULL,
+  `ifweizhi` int(10) DEFAULT NULL,
+  `gongzhonghao` text,
+  `ifPublicNumber` int(10) DEFAULT NULL,
+  `qrcode` varchar(255) DEFAULT NULL,
+  `ywyuedu` text,
+  `infoid` varchar(200) DEFAULT '0',
+  `daili` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1041 ;
